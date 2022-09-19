@@ -1,0 +1,24 @@
+name: Events exercices
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the first job
+        run: |
+          echo ${{ github.event_name }}
+          echo $(date)
+
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the second job
+        run: |
+          echo ${{ github.event_name }}
+          echo $(date)
+
