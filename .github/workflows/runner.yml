@@ -7,7 +7,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: "node-app"
+        working-directory: node-app
 
     steps:
       - run: npm install --production
@@ -17,7 +17,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: "node-app"
+        working-directory: node-app
 
     steps:
       - run: npm run test
