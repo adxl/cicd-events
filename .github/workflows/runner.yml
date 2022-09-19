@@ -3,11 +3,12 @@ on:
 
 jobs:
   install:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         node_version: [12,14,16]
         os: [ubuntu-latest, windows]
+
+    runs-on: "${{ matrix.os }}"
 
     defaults:
       run:
@@ -15,6 +16,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node_version: "${{ matrix.node_version }}"
       - run: npm install
       - run: npm run test
     
