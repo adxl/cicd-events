@@ -5,8 +5,8 @@ jobs:
   install:
     strategy:
       matrix:
-        node_version: [12,14,16]
         os: [ubuntu-latest, windows]
+        node_version: [14,16]
 
     runs-on: "${{ matrix.os }}"
 
