@@ -20,7 +20,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./node-app
+        working-directory: node-app
 
     steps:
       - uses: actions/checkout@v3
