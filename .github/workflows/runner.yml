@@ -10,6 +10,7 @@ jobs:
         working-directory: node-app
 
     steps:
+      - uses: actions/checkout@v3
       - run: npm install --production
     
   tests:
@@ -22,4 +23,5 @@ jobs:
         working-directory: ./node-app
 
     steps:
+      - uses: actions/checkout@v3
       - run: npm run test
