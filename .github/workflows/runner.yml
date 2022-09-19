@@ -5,9 +5,6 @@ jobs:
   install:
     runs-on: ubuntu-latest
     
-    defaults:
-      run:
-        working-directory: node-app
 
     steps:
       - run: npm install --production
